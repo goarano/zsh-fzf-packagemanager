@@ -6,7 +6,7 @@ Supports the following package managers:
 
 * brew
 * apt
-* dnf (in progress)
+* dnf
 
 ## Usage
 
@@ -17,17 +17,25 @@ Alternatively to using them you can also take advantage of the [fzf completion f
 
 The following aliases are available:
 
-* `aip`: apt install package
-* `arp`: apt remove package
+* `aip` apt install package
+* `arp` apt remove package
 
 ### brew
 
 The following aliases are available:
 
-* `bip`: brew install package
-* `bup`: brew uninstall package
-* `bcip`: brew --cask install package
-* `bcup`: brew --cask uninstall package
+* `bip` brew install package
+* `bup` brew uninstall package
+* `bcip` brew --cask install package
+* `bcup` brew --cask uninstall package
+
+### dnf
+
+The following aliases are available:
+
+* `dip` dnf install package
+* `drp` dnf remove package
+
 
 ## Installation
 

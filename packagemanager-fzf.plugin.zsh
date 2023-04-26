@@ -11,4 +11,9 @@ else
         __pmf_brew_setup
         unfunction __pmf_brew_setup
     fi
+    if [ $commands[dnf] ]; then
+        source "$(dirname $0)/dnf.zsh"
+        __pmf_dnf_setup
+        unfunction __pmf_dnf_setup
+    fi
 fi
