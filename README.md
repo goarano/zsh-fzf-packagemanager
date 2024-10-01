@@ -43,7 +43,7 @@ You need to have [fzf](https://github.com/junegunn/fzf) installed.
 
 ### Antidote
 ```
-anidote install goarano/zsh-packagemanager-fzf
+antidote install goarano/zsh-packagemanager-fzf
 ```
 
 ### Zgen
