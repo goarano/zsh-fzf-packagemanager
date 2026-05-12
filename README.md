@@ -37,27 +37,40 @@ The following aliases are available:
 * `drp` dnf remove package
 
 
+## Configuration
+
+The fzf preview command and keybindings can be customized by setting the following variables **after** the plugin is loaded:
+
+| Variable | Default | Description |
+|---|---|---|
+| `PACKAGEMANAGER_FZF_APT_PREVIEW` | `apt-cache show {}` | Preview command for apt packages |
+| `PACKAGEMANAGER_FZF_DNF_PREVIEW` | `dnf -C --nogpgcheck info {}` | Preview command for dnf packages |
+| `PACKAGEMANAGER_FZF_BREW_PREVIEW` | `HOMEBREW_COLOR=true brew info {}` | Preview command for brew formulae |
+| `PACKAGEMANAGER_FZF_BREW_BIND` | `ctrl-x:execute-silent(brew home {})` | Keybinding for brew formulae |
+| `PACKAGEMANAGER_FZF_BREW_CASK_PREVIEW` | `HOMEBREW_COLOR=true brew info --cask {}` | Preview command for brew casks |
+| `PACKAGEMANAGER_FZF_BREW_CASK_BIND` | `ctrl-x:execute-silent(brew home --cask {})` | Keybinding for brew casks |
+
 ## Installation
 
 You need to have [fzf](https://github.com/junegunn/fzf) installed.
 
 ### Antidote
 ```
-antidote install goarano/zsh-packagemanager-fzf
+antidote install goarano/zsh-fzf-packagemanager
 ```
 
 ### Zgen
 ```
-zgen load goarano/zsh-packagemanager-fzf
+zgen load goarano/zsh-fzf-packagemanager
 ```
 
 ### Antigen
 ```
-antigen bundle goarano/zsh-packagemanager-fzf
+antigen bundle goarano/zsh-fzf-packagemanager
 ```
 
 ## Credits
 
-♥ Kudos to @jungeunn for developing [fzf](https://github.com/junegunn/fzf).
+♥ Kudos to @junegunn for developing [fzf](https://github.com/junegunn/fzf).
 
 ♥ This plugin was inspired by [fzf-brew](https://github.com/thirteen37/fzf-brew).

@@ -1,0 +1,31 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zsh
+
+      - name: Install bats-core
+        run: |
+          git clone --depth 1 https://github.com/bats-core/bats-core.git "$RUNNER_TEMP/bats-core"
+          sudo "$RUNNER_TEMP/bats-core/install.sh" /usr/local
+
+      - name: Run tests
+        run: bats test/
