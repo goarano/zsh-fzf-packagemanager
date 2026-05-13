@@ -1,10 +1,5 @@
 #!/usr/bin/env zsh
 
-if (( ! $+commands[fzf] )); then
-    echo "zsh-fzf-packagemanager: fzf not found in PATH. Plugin not loaded." >&2
-    return 1
-fi
-
 if [ $commands[apt-get] ]; then
     source "$(dirname $0)/apt.zsh"
     __fpm_apt_setup
