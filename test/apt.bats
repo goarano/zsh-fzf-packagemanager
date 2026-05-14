@@ -6,7 +6,6 @@ load helpers/setup
 
 setup() {
     mkdir -p "$BATS_TEST_TMPDIR/bin"
-    create_mock fzf
     create_mock apt-get
     create_mock apt-cache 'echo "vim - Vi IMproved"'
     create_mock dpkg 'printf "vim\tinstall\ngit\tinstall\nold-pkg\tdeinstall\n"'

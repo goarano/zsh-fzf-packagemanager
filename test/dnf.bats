@@ -6,7 +6,6 @@ load helpers/setup
 
 setup() {
     mkdir -p "$BATS_TEST_TMPDIR/bin"
-    create_mock fzf
     create_mock dnf
 }
 
